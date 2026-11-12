@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,7 +68,7 @@
         <div class="section-heading">
             <span class="eyebrow">DETECTION WORKSPACE</span>
             <h2>Inspect a road image</h2>
-            <p>Upload a road image to preview it in the workspace.</p>
+            <p>Upload a road image to preview and analyze it for potholes.</p>
         </div>
 
         <div class="workspace">
@@ -108,6 +109,7 @@
 
                 <div class="file-row">
                     <span id="fileName">No image selected</span>
+
                     <button
                         id="clearImage"
                         class="btn secondary small"
@@ -117,13 +119,32 @@
                         Clear Image
                     </button>
                 </div>
+
+                <!-- AI Detection Button -->
+                <div class="detect-actions">
+                    <button
+                        id="detectButton"
+                        class="btn primary"
+                        type="button"
+                        disabled
+                    >
+                        Detect Potholes
+                    </button>
+                </div>
+
+                <!-- AI Detection Results -->
+                <div
+                    id="aiResults"
+                    class="ai-results"
+                    hidden
+                ></div>
             </div>
         </div>
 
         <div class="notice">
             <p>
-                <strong>Note:</strong> Image preview is working.
-                Actual AI pothole detection will be connected separately.
+                <strong>Note:</strong> Select a road image and click
+                Detect Potholes to run AI analysis.
             </p>
         </div>
     </div>
@@ -145,9 +166,9 @@
             </div>
 
             <div class="dashboard-card">
-                <p>AI Detections</p>
-                <strong>Not Connected</strong>
-                <small>AI model integration pending</small>
+                <p>Potholes Detected</p>
+                <strong id="detectionCount">0</strong>
+                <small>AI detection results</small>
             </div>
 
             <div class="dashboard-card">
@@ -191,13 +212,13 @@
             <div class="step-card">
                 <span>02</span>
                 <h3>Analyze with AI</h3>
-                <p>A trained AI model will analyze the image after integration.</p>
+                <p>The AI model analyzes the image for potholes.</p>
             </div>
 
             <div class="step-card">
                 <span>03</span>
                 <h3>Review Results</h3>
-                <p>Review pothole detections once the AI model is connected.</p>
+                <p>Review highlighted potholes and confidence scores.</p>
             </div>
         </div>
     </div>
@@ -231,3 +252,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+ō

@@ -745,3 +745,27 @@ button {
         flex-direction: column;
     }
 }
+
+.preview-area {
+    width: 100%;
+    min-height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagePreview {
+    display: block;
+    max-width: 100%;
+    max-height: 450px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+#imagePreview[hidden],
+#imagePlaceholder[hidden] {
+    display: none !important;
+}

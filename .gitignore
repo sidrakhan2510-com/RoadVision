@@ -1,0 +1,8 @@
+﻿backend/venv/
+backend/uploads/
+backend/results/
+backend/roadvision_history.db
+backend/__pycache__/
+backend/*.pyc
+backend copy/
+.env
